@@ -1,5 +1,7 @@
-%bcond_with	bootstrap	# build a bootstrap version, using icedtea6
-%bcond_without	cacerts		# don't include the default CA certificates
+#
+# Conditional build:
+%bcond_with	bootstrap	# bootstrap version, using openjdk22
+%bcond_without	cacerts		# default CA certificates packaging
 
 %if %{with bootstrap}
 %define		use_jdk	openjdk22
